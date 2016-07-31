@@ -4,23 +4,23 @@
  * 
  */
 public class Quicksorting {
-	public static void quicksort(int Array[], int izq, int der) {
+	public static void quicksort(Comparable Array[], int izq, int der) {
 
-		  int pivote=Array[izq];
+		  int pivote= (Integer) Array[izq];
 		  int i=izq; // busqueda izquierda-derecha
 		  int j=der; // busqueda derecha-izquierda
 		  int aux;
 		 
 		  while(i<j){            
-		     while(Array[i]<=pivote && i<j) i++; 
-		     while(Array[j]>pivote) j--;         
+		     while((Integer)Array[i]<=pivote && i<j) i++; 
+		     while((Integer)Array[j]>pivote) j--;         
 		     if (i<j) {                                           
-		         aux= Array[i];                  
+		         aux= (Integer) Array[i];                  
 		         Array[i]=Array[j];
 		         Array[j]=aux;
 		     }
 		   }
-		  // Los números menores al pivote se ordenan a la izquierda y los mayores a él a la derecha
+		  // Los nÃºmeros menores al pivote se ordenan a la izquierda y los mayores a Ã©l a la derecha
 		   Array[izq]=Array[j]; 
 		   Array[j]=pivote; 
 		   if(izq<j-1)
