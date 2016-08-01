@@ -3,7 +3,7 @@
  * MergeSort.java ... Clase necesaria para ordenar una lista de numeros por el método de MergeSorting.
  * 
  */
-package Archivos;
+
 
 /**
  * Clase necesaria para ordenar una lista de numeros por el método de MergeSorting.

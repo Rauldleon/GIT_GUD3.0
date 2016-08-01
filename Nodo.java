@@ -1,24 +1,24 @@
 /* Algoritmos y Estructuras de Datos.
  * Nombres: Didier Salazar, 15487. Raul de Leon, Michelle Morales, Joselin Ortiz.
- * Lista.java ... Clase necesaria para crear una lista.
+ * Nodo.java ... Clase necesaria para implementar un nodo en una lista.
  * 
  */
-package Archivos;
+
 
 /**
- *
- * @author Didier
- * @param <T>
+ *Clase necesaria para implementar un nodo en una lista.
+* @author Didier Salazar, 15487. Raul de Leon, Michelle Morales, Joselin Ortiz.
+ * @param <T> Objeto generico que extiende de la clase comparable.
  */
 public class Nodo<T extends Comparable>
 {
-    private T Valor;
+    private T Valor; //Objeto generico del valor del nodo.
     
-    private Nodo Siguiente;
+    private Nodo Siguiente; //Referencia al nodo siguiente.
     
     /**
-     *
-     * @param valor
+     *Metodo que crea un nodo.
+     * @param valor Valor del nodo.
      */
     public Nodo(T valor)
     {
@@ -27,8 +27,8 @@ public class Nodo<T extends Comparable>
     }
     
     /**
-     *
-     * @param valor
+     *Metodo que setea un nodo.
+     * @param valor Valor del nodo.
      */
     public void setValor(T valor)
     {
@@ -36,8 +36,8 @@ public class Nodo<T extends Comparable>
     }
     
     /**
-     *
-     * @return
+     *Metodo que regresa el valor de un nodo.
+     * @return Valor de un nodo.
      */
     public T getValor()
     {
@@ -45,8 +45,8 @@ public class Nodo<T extends Comparable>
     }    
     
     /**
-     *
-     * @param siguiente
+     * Metodo que setea la referencia al siguiente nodo.
+     * @param siguiente Referencia al siguiente noto.
      */
     public void setSiguiente(Nodo siguiente)
     {
@@ -54,8 +54,8 @@ public class Nodo<T extends Comparable>
     }
     
     /**
-     *
-     * @return
+     * Metodo que devuelve la referencia del siguiente nodo.
+     * @return Devuelve la referencia del siguiente nodo.
      */
     public Nodo getSiguiente()
     {
@@ -69,9 +69,9 @@ public class Nodo<T extends Comparable>
     }
     
     /**
-     *
-     * @param other
-     * @return
+     * Metodo que compara valores de nodos.
+     * @param other valor de un nodo.
+     * @return El compare to con el nodo actual.
      */
     public int compareTo(T other)
     {

@@ -3,35 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hojadetrabajo3;
 
-import java.util.List;
 
 /**
  *
- * @author Joseline
+ * @author Didier
  */
 public class BubbleSort {
-
-    
-    public void bubbleSort(Lista lista) throws Exception {
-        int len = lista.getLargo();
-        boolean swapped = true;
-        int j = 0;
-        int tmp;
-        while (swapped) {
-            swapped = false;
-            j++;
-            for (int i = 0; i < len - j; i++) {                                       
-                if ((Integer)(lista.getValor(i)) > (Integer)(lista.getValor(i + 1))) {                          
-                    tmp = (Integer)(lista.getValor(i));
-                    lista.editForPosition(i,(Integer)(lista.getValor(i+1)));
-                    lista.editForPosition((i+1),tmp);
-                    swapped = true;
+  
+      
+public Lista bubbleSort(Lista lista) throws Exception {
+               
+                int n = lista.getLargo();
+                int temp = 0;
+               
+                for(int i=0; i < n; i++){
+                        for(int j=1; j < (n-i); j++){
+                               
+                                if((Integer)lista.getValor(j-1) > (Integer)lista.getValor(j)){
+                                        //swap the elements!
+                                        temp = (Integer)lista.getValor(j-1);
+                                        lista.editForPosition(j-1, lista.getValor(j));
+                                        lista.editForPosition(j,temp);
+                                }
+                               
+                        }
                 }
-            }                
+                return lista;
         }
-        System.out.println("Resultado del ordenamiento BubbleSort: "+((List<Integer>) lista));
-    }
-    
 }
+      
+  

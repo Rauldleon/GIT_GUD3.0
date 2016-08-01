@@ -3,7 +3,7 @@
  * Archivos.java ... Clase encargada de leer y escribir sobre archivos.
  * 
  */
-package Archivos;
+
 import java.io.*;
        
 /**

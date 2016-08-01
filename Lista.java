@@ -3,7 +3,7 @@
  * Lista.java ... Clase necesaria para crear una lista.
  * 
  */
-package Archivos;
+
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 /**
  *
- * @author Didier Salazar, 15487. Raul de Leon, Michelle Morales, Joselin Ortiz.
+ * @author Didier Salazar, Raul de Leon, Michelle Morales, Joselin Ortiz.
  * @param <T> Nodo de la lista, valor.
  */
 public class Lista<T> {
@@ -100,7 +100,12 @@ public class Lista<T> {
             throw new Exception("No existe tal posición ingresada.");
         }
     }
-    
+    /**
+     * Actualiza el valor de un nodo que se encuentre en la lista ubicado
+     * por su posición.
+     * @param posicion en la cual se encuentra el nodo a actualizar.
+     * @param valor nuevo valor para el nodo.
+     */
     public void editForPosition(int posicion , Comparable valor){
         // Verifica si la posición ingresada se encuentre en el rango
         // >= 0 y < que el numero de elementos del la lista.
@@ -122,8 +127,7 @@ public class Lista<T> {
                 aux.setValor(valor);
             }
         }
-    }
-    
+    }    
 }
         
 
