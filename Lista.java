@@ -99,7 +99,31 @@ public class Lista<T> {
         } else {
             throw new Exception("No existe tal posición ingresada.");
         }
-    }    
+    }
+    
+    public void editForPosition(int posicion , Comparable valor){
+        // Verifica si la posición ingresada se encuentre en el rango
+        // >= 0 y < que el numero de elementos del la lista.
+        if(posicion>=0 && posicion<Largo){
+            // Consulta si el nodo a eliminar es el primero.
+            if(posicion == 0){
+                // Alctualiza el valor delprimer nodo.
+                Cabeza.setValor(valor);
+            }
+            else{
+                // En caso que el nodo a eliminar este por el medio 
+                // o sea el ultimo
+                Nodo aux = Cabeza;
+                // Recorre la lista hasta lleger al nodo anterior al eliminar.
+                for (int i = 0; i < posicion; i++) {
+                    aux = aux.getSiguiente();
+                }
+                // Alctualiza el valor del nodo.
+                aux.setValor(valor);
+            }
+        }
+    }
+    
 }
         
 
