@@ -14,23 +14,24 @@ import java.util.List;
 public class BubbleSort {
 
     
-    public List<Integer> bubbleSort(List<Integer> lista) {
-      boolean swapped = true;
-      int j = 0;
-      int tmp;
-      while (swapped) {
+    public void bubbleSort(Lista lista) throws Exception {
+        int len = lista.getLargo();
+        boolean swapped = true;
+        int j = 0;
+        int tmp;
+        while (swapped) {
             swapped = false;
             j++;
-            for (int i = 0; i < lista.size() - j; i++) {                                       
-                  if (lista.get(i) > lista.get(i + 1)) {                          
-                        tmp = lista.get(i);
-                        lista.set((i),lista.get(i + 1));
-                        lista.set((i+1),tmp);
-                        swapped = true;
-                  }
+            for (int i = 0; i < len - j; i++) {                                       
+                if ((Integer)(lista.getValor(i)) > (Integer)(lista.getValor(i + 1))) {                          
+                    tmp = (Integer)(lista.getValor(i));
+                    lista.editForPosition(i,(Integer)(lista.getValor(i+1)));
+                    lista.editForPosition((i+1),tmp);
+                    swapped = true;
+                }
             }                
-      }
-        return lista;
-}
+        }
+        System.out.println("Resultado del ordenamiento BubbleSort: "+((List<Integer>) lista));
+    }
     
 }
