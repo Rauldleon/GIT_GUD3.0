@@ -102,6 +102,7 @@ public class QuickSort{
 	 * @param Array Recibe un array de números enteros
 	 * @param izq recibe los valores izq = 0
 	 * @param der recibe los valores der = número de elementos - 1
+	 * Código obtenido de http://puntocomnoesunlenguaje.blogspot.com/2012/12/java-quicksort.html
 	 */
 	public void quicksort(Comparable Array[],int izq, int der) {
                   
